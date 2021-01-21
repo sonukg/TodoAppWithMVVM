@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.AddTodoActivity">
+
+    <EditText
+        android:id="@+id/taskType"
+        android:layout_width="389dp"
+        android:layout_height="74dp"
+        android:layout_marginTop="12dp"
+        android:autofillHints=""
+        android:drawableLeft="@drawable/ic_baseline_category_24"
+        android:drawablePadding="5dp"
+        android:ems="10"
+        android:hint="@string/task_type"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/taskCompletionsDate" />
+
+    <EditText
+        android:id="@+id/taskCompletionsDate"
+        android:layout_width="390dp"
+        android:layout_height="69dp"
+        android:layout_marginTop="100dp"
+        android:autofillHints=""
+        android:drawableLeft="@drawable/ic_baseline_date_range_24"
+        android:drawablePadding="5dp"
+        android:ems="10"
+        android:hint="@string/task_completetion_date"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.619"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/taskName"
+        android:layout_width="389dp"
+        android:layout_height="71dp"
+        android:layout_marginTop="12dp"
+        android:autofillHints=""
+        android:drawableLeft="@drawable/ic_baseline_create_24"
+        android:drawablePadding="5dp"
+        android:ems="10"
+        android:hint="@string/name"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/taskCompletionsDate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.59"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.058" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="388dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center_horizontal"
+        android:text="@string/add_new_todo"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="385dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.576"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/taskType"
+        tools:listitem="@layout/support_simple_spinner_dropdown_item" />
+
+    <Button
+        android:id="@+id/addSubmit"
+        android:layout_width="389dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/design_default_color_primary"
+        android:text="Button"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner" />
+</androidx.constraintlayout.widget.ConstraintLayout>
